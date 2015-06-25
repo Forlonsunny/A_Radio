@@ -3,9 +3,11 @@ package theoaktroop.irb24.net;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -19,13 +21,18 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
 
     private static String file_url;
     MediaPlayer mediaPlayer;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     public void onCreate() {
 
+        sharedPreferences = getSharedPreferences("IRB24Data",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         mediaPlayer = new MediaPlayer();
         file_url = "http://103.19.255.242:8081/stream";
-        System.out.println("Service in OnCreate()!");
+
+//        System.out.println("Service in OnCreate()!");
 
 
         AudioManager am = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
@@ -49,13 +56,17 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
                         mp.start();
                     }
                 });
-                System.out.println("Service in Try!");
+//                editor.putBoolean("flag", true);
+//                editor.commit();
+//                System.out.println("Service in Try!");
 //                Toast.makeText(getApplicationContext(), "Playing IRB24.NET", Toast.LENGTH_SHORT).show();
             }
             catch (IOException e) {
                 e.printStackTrace();
                 Toast.makeText(getApplicationContext(),"Something wrong...",Toast.LENGTH_SHORT).show();
-//                System.out.println("Service in Catch!");
+//                editor.putBoolean("flag", false);
+//                editor.commit();
+// System.out.println("Service in Catch!");
             }
         }
         super.onCreate();
@@ -64,9 +75,6 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
-
-
 
         return super.onStartCommand(intent, flags, startId);
     }
@@ -108,6 +116,9 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
         if(mediaPlayer!=null){
             mediaPlayer.stop();
             mediaPlayer=null;
+
+//            editor.putBoolean("flag", false);
+//            editor.commit();
         }
 
     }

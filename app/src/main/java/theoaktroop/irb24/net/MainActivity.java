@@ -28,23 +28,38 @@ public class MainActivity extends ActionBarActivity {
     boolean isServiceRunning;
     Intent intent;
     ImageView button;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (ImageView) findViewById(R.id.button);
+        sharedPreferences = getSharedPreferences("IRB24Data", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         if(isInternetAvailable()){
             isServiceRunning = UtilFunctions.isServiceRunning(MyService.class.getName(), getApplicationContext());
-            if (!isServiceRunning) {
+            if (!isServiceRunning) {//Service is stop now, so Start it!
                 intent = new Intent(getApplicationContext(), MyService.class);
                 startService(intent);
+
                 button.setImageResource(R.drawable.ic_stop);
-//                Toast.makeText(getApplicationContext(),"Start Service From MainActivity",Toast.LENGTH_SHORT).show();
+                editor.putBoolean("flag", true);
+                editor.commit();
+//                Toast.makeText(getApplicationContext(),"mara kha...",Toast.LENGTH_LONG).show();
+
+//              Toast.makeText(getApplicationContext(),"Start Service From MainActivity",Toast.LENGTH_SHORT).show();
+            }
+            else{//Service is running now
+                button.setImageResource(R.drawable.ic_stop);
             }
         }
         else {
+            button.setImageResource(R.drawable.ic_play);
+//            editor.putBoolean("flag",false);
+//            editor.commit();
             Toast.makeText(getApplicationContext(),"Check your Internet Connection!",Toast.LENGTH_LONG).show();
         }
 
@@ -62,27 +77,33 @@ public class MainActivity extends ActionBarActivity {
 
     public void buttonClick(View v) {
 
-        isServiceRunning = UtilFunctions.isServiceRunning(MyService.class.getName(), getApplicationContext());
-        if (!isServiceRunning) {
-
             if(isInternetAvailable()){
-                intent = new Intent(getApplicationContext(), MyService.class);
-                startService(intent);
-//                button.setText("STOP");
-//                Toast.makeText(getApplicationContext(),"Service Start by Button",Toast.LENGTH_SHORT).show();
-                button.setImageResource(R.drawable.ic_stop);
-            }
-            else
-                Toast.makeText(getApplicationContext(),"Check your Internet Connection!",Toast.LENGTH_LONG).show();
 
-        }
-        else{
-            intent = new Intent(getApplicationContext(), MyService.class);
-            stopService(intent);
-            button.setImageResource(R.drawable.ic_play);
-//            button.setText("PLAY");
-//            Toast.makeText(getApplicationContext(),"Service Stop by Button",Toast.LENGTH_SHORT).show();
-        }
+                isServiceRunning = UtilFunctions.isServiceRunning(MyService.class.getName(), getApplicationContext());
+                if(!isServiceRunning){//If service is Stop (not running) then Start Service
+
+                    intent = new Intent(getApplicationContext(), MyService.class);
+                    startService(intent);
+    //                button.setText("STOP");
+    //                Toast.makeText(getApplicationContext(),"Service Start by Button",Toast.LENGTH_SHORT).show();
+                    button.setImageResource(R.drawable.ic_stop);
+                    editor.putBoolean("flag",true);
+                    editor.commit();
+                }
+                else {//Service is running, then Stop the Service
+                    intent = new Intent(getApplicationContext(), MyService.class);
+                    stopService(intent);
+                    button.setImageResource(R.drawable.ic_play);
+                    editor.putBoolean("flag", false);
+                    editor.commit();
+                }
+
+            }
+            else{
+                editor.putBoolean("flag", false);
+                editor.commit();
+                Toast.makeText(getApplicationContext(),"Check your Internet Connection!",Toast.LENGTH_LONG).show();
+            }
 
     }
 
@@ -91,8 +112,12 @@ public class MainActivity extends ActionBarActivity {
         super.onPause();
 
         isServiceRunning = UtilFunctions.isServiceRunning(MyService.class.getName(), getApplicationContext());
-        if (!isServiceRunning)
-        finish();
+        if (!isServiceRunning){
+            editor.putBoolean("flag", false);
+            editor.commit();
+            finish();
+        }
+
     }
 
     @Override
