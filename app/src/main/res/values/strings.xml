@@ -36,6 +36,9 @@
     <string name="irb_fb">"https://www.facebook.com/irb24"</string>
     <string name="irb_twitter">"https://twitter.com/irb24"</string>
     <string name="irb_youtube">"https://www.youtube.com/user/irb24online"</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-4390116502881258/2232333721</string>-->
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
 
     <string name="about_irb_headline">ইসলামিক রেডিও বাংলা (IRB) সম্পর্কে:\n</string>

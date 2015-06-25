@@ -1,6 +1,9 @@
 package theoaktroop.irb24.net;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -178,7 +181,33 @@ public class DeveloperActivity extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        finish();
+       SharedPreferences sharedPreferences;
+        SharedPreferences.Editor editor;
+
+        sharedPreferences = getSharedPreferences("RadioAppData", Context.MODE_PRIVATE);
+         editor=sharedPreferences.edit();
+        int ot = getResources().getConfiguration().orientation;
+        if(ot== Configuration.ORIENTATION_LANDSCAPE){
+            editor.putInt("flagD",1);
+            editor.commit();
+
+        }
+        else if(ot==Configuration.ORIENTATION_PORTRAIT && sharedPreferences.getInt("flagD",0)!=0) {
+            editor.putInt("flagD",0);
+            editor.commit();
+        }
+
+        else if(ot==Configuration.ORIENTATION_PORTRAIT && sharedPreferences.getInt("flagD",0)==0)
+        {
+            finish();
+
+        }
+
+
+
+
     }
 
 }
+
+

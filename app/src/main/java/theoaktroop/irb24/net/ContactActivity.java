@@ -1,16 +1,24 @@
 package theoaktroop.irb24.net;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 
 public class ContactActivity extends ActionBarActivity {
@@ -21,7 +29,7 @@ public class ContactActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-
+      addVisibile();
     }
 
     public void emailAction(View view){
@@ -108,11 +116,52 @@ public class ContactActivity extends ActionBarActivity {
         }
 
     }
+    private void addVisibile() {
 
+        LinearLayout adLinearLayout=(LinearLayout)findViewById(R.id.adConActivity);
+        if(isNetworkAvailable()) {
+            adLinearLayout.setVisibility(View.VISIBLE);
+            AdView mAdView;
+            mAdView = (AdView) findViewById(R.id.adView1);
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        }
+        else {
+            adLinearLayout.setVisibility(View.GONE);
+        }
+    }
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
     @Override
     protected void onPause() {
         super.onPause();
-        finish();
+        addVisibile();
+        SharedPreferences sharedPreferences;
+        SharedPreferences.Editor editor;
+
+        sharedPreferences = getSharedPreferences("RadioAppData", Context.MODE_PRIVATE);
+        editor=sharedPreferences.edit();
+        int ot = getResources().getConfiguration().orientation;
+        if(ot== Configuration.ORIENTATION_LANDSCAPE){
+            editor.putInt("flagC",1);
+            editor.commit();
+
+        }
+        else if(ot==Configuration.ORIENTATION_PORTRAIT && sharedPreferences.getInt("flagC",0)!=0) {
+            editor.putInt("flagC",0);
+            editor.commit();
+        }
+
+        else if(ot==Configuration.ORIENTATION_PORTRAIT && sharedPreferences.getInt("flagC",0)==0)
+        {
+            finish();
+
+        }
+
     }
 
 }
