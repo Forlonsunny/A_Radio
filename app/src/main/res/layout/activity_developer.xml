@@ -1,0 +1,466 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context="theoaktroop.appoframadan.AboutDeveloper">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/about_developer"
+                android:id="@+id/about_developer" />
+
+
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:onClick="FacebookActionOak"-->
+                <!--android:id="@+id/oak_team_fb_layout"-->
+                <!--android:clickable="true">-->
+
+
+            <!--</LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/developer_head_line"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="#325C74"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#104E8B"
+                        android:text="Hasan Abdullah"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/designation"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_email"
+                            android:onClick="emailAction"
+                            android:id="@+id/emailHasan"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_facebook"
+                            android:onClick="FacebookAction"
+                            android:id="@+id/hasan_fb"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/hasan_email"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:onClick="EmailAction"-->
+                    <!--android:clickable="true"-->
+                    <!-->-->
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:src="@drawable/ic_email"-->
+                    <!--/>-->
+                    <!--<TextView-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="#104E8B"-->
+                    <!--android:text="@string/mail_note"/>-->
+
+                    <!--</LinearLayout>-->
+
+
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/mail_hasan"-->
+                    <!--android:onClick="EmailAction"-->
+                    <!--android:id="@+id/hasan_email"-->
+                    <!--android:autoLink="email"-->
+                    <!--android:linksClickable="true"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="150dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/facebook_note"-->
+                    <!--android:onClick="FacebookAction"-->
+                    <!--android:textColor="#104E8B"-->
+                    <!--android:id="@+id/hasan_fb"-->
+                    <!--android:autoLink="web"-->
+                    <!--android:linksClickable="true"-->
+                    <!--/>-->
+
+
+                </LinearLayout>
+                <!--<Space-->
+                <!--android:layout_width="22dp"-->
+                <!--android:layout_height="wrap_content" />-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mahadi Hasan"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#104E8B"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/designation"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_email"
+                            android:onClick="emailAction"
+                            android:id="@+id/sunny_email"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_facebook"
+                            android:onClick="FacebookAction"
+                            android:id="@+id/sunny_fb"
+                            />
+
+
+
+                    </LinearLayout>
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Mail me"-->
+                    <!--android:onClick="EmailAction"-->
+                    <!--android:id="@+id/"-->
+                    <!--android:autoLink="email"-->
+                    <!--android:linksClickable="true"-->
+                    <!--/>-->
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mainuddin Chisty"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#104E8B"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/designation"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_email"
+                            android:onClick="emailAction"
+                            android:id="@+id/chisty_email"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_facebook"
+                            android:onClick="FacebookAction"
+                            android:id="@+id/chisty_fb"
+                            />
+
+
+
+                    </LinearLayout>
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/mail_chisty"-->
+                    <!--android:onClick="EmailAction"-->
+                    <!--android:id="@+id/chysti_email"-->
+                    <!--android:autoLink="email"-->
+                    <!--android:linksClickable="true"-->
+                    <!--/>-->
+                    <!--<TextView-->
+                    <!--android:layout_width="150dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/chisty_fb"-->
+                    <!--android:textColor="#104E8B"-->
+                    <!--android:text="@string/facebook_note"-->
+                    <!--android:onClick="FacebookAction"-->
+                    <!--android:autoLink="web"-->
+                    <!--android:linksClickable="true"-->
+
+                    <!--/>-->
+
+
+                </LinearLayout>
+
+                <!--<Space-->
+                <!--android:layout_width="15dp"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shakir Ahmed"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#104E8B"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Graphics Designer"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_email"
+                            android:onClick="emailAction"
+                            android:id="@+id/saimum_email"
+                            />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_facebook"
+                            android:onClick="FacebookAction"
+                            android:id="@+id/saimum_fb"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company_name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#104E8B"
+                    android:paddingTop="2dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="8"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_phone_call"
+                        android:onClick="callToDeveloper"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_email"
+                        android:onClick="emailAction"
+                        android:id="@+id/emailOakTeam"
+                        android:layout_weight="1"
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_facebook"
+                        android:onClick="FacebookActionOak"
+                        android:id="@+id/oak_team_fb"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/play_store"
+                        android:onClick="playStoreShow"
+                        android:id="@+id/play_store_id"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:text="Copyright @ The Oak Team - 2015" />-->
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+
+
+
+
+</LinearLayout>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--tools:context="theoaktroop.irb24.net.DeveloperActivity">-->
+
+    <!--<TextView android:text="@string/hello_world" android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--</RelativeLayout>-->

@@ -1,7 +1,63 @@
 <resources>
-    <string name="app_name">A Radio</string>
+    <string name="app_name">Islamic Radio Bangla</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_home">Home</string>
+    <string name="action_about">About</string>
+    <string name="action_donate">Donate</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_developer">Developer</string>
     <string name="title_activity_splash_screen">IRB24.NET</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_donate">DonateActivity</string>
+    <string name="title_activity_contact">যোগাযোগ</string>
+    <string name="title_activity_developer">Developer</string>
+
+    <string name="company_name">The Oak Troop</string>
+    <string name="about_developer">আপনার প্রয়োজনীয় ও মানসম্পন্ন Android App ডেভেলপ করতে আমরা বদ্ধ পরিকর। ব্যক্তিগত বা প্রতিষ্ঠানের এপ্লিকেশন তৈরি করতে যোগাযোগ করুন।</string>
+    <string name="facebook_oak_team">ফেসবুকে The Oak Troop</string>
+    <string name="facebook_note">Me on Facebook</string>
+    <string name="mail_note">Mail me</string>
+    <string name="developer_head_line">We try our best...</string>
+    <string name="designation">Developer</string>
+
+    <string name="title_team_fb">"http://www.facebook.com/TheOakTeam"</string>
+    <string name="title_hasan_fb">"http://www.facebook.com/hasan.cse91"</string>
+    <string name="title_sunny_fb">"http://www.facebook.com/mahadihasansunny1"</string>
+    <string name="title_chisty_fb">"http://www.facebook.com/mainuddin.chisty1"</string>
+    <string name="title_saimum_fb">"http://www.facebook.com/shakirahmedsaimum"</string>
+
+    <string name="mobile_team">"01521208079"</string>
+    <string name="mail_hasan">"hasan_cse91@yahoo.com"</string>
+    <string name="mail_sunny">"sunny_mhs@hotmail.com"</string>
+    <string name="mail_chisty">"chistyinfo@gmail.com"</string>
+
+    <string name="irb_mail">"infoirb24.net@gmail.com"</string>
+    <string name="irb_fb">"https://www.facebook.com/irb24"</string>
+    <string name="irb_twitter">"https://twitter.com/irb24"</string>
+    <string name="irb_youtube">"https://www.youtube.com/user/irb24online"</string>
+
+
+    <string name="about_irb_headline">ইসলামিক রেডিও বাংলা (IRB) সম্পর্কে:\n</string>
+    <string name="about_irb">
+বাংলাদেশে ইসলামী সংস্কৃতি চর্চার ইতিহাস বেশ পুরনো। জাতীয় কবি কাজী নজরুল ইসলাম, ফররুখ আহমেদ, আব্বাসউদ্দিন, আব্দুল আলীম সহ অসংখ্য কবি গীতিকার ও শিল্পী, বৈরী পরিবেশের মধ্যেও এই অঞ্চলে ইসলামী সংস্কৃতির প্রসার ঘটিয়েছেন।\n\n
+
+স্বাধীনতা পরবর্তি সময়ে মরহুম কবি মতিউর রহমান মল্লিক, আইনুদ্দিন আল আজাদ সহ অনেক সাংস্কৃতিক ব্যক্তিত্বের হাত ধরে গড়ে উঠেছে অসংখ্য সাংস্কৃতিক সংগঠন। এসব সাংস্কৃতিক সংগঠগুলো দেশের আনাচে কানাচে ইসলামী সংস্কৃতির আহবান পৌছে দিচ্ছে। তৈরী করছে অসংখ্য দর্শক শ্রেতা।
+\n\n
+সময়ের পরিক্রমায় দিন দিন পৃথিবী আধুনিক হচ্ছে। সামাজিক, নৈতিক অবক্ষয়ের কারণে অনেক বাবা মা চান তার সন্তান ইসলামী সংস্কৃতির মাধ্যমে বিনোদন করুক। কিন্তু এই স্যাটেলাইট, এফএম, ইউটিউব এর যুগে আমাদের কোন মাধ্যম নেই এই বিপুল শ্রেণীর মনের খোরাক মিটাবার। নেই মানসম্মত প্রোডাকশনও। যেগুলো আছে তা যতসামান্য। ফলে ধীরে ধীরে আমাদের তৈরী দর্শক শ্রোতা হারিয়ে যাচ্ছে।
+\n\n
+সেই উপলব্ধি থেকেই কিছু তরুণ এর হাত ধরে আইআরবির জন্ম ....\n\n
+    </string>
+
+<string name="donate">এই উদ্যোগকে সামনে এগিয়ে নিতে আপনিও সামিল হোন আমাদের সাথে।\n\n
+ডোনেট করুন:\n
+ইসলামিক রেডিও বাংলা\n
+হিসাব নং MD44353\n
+আল-আরাফাহ্ ইসলামী ব্যাংক, নারায়ণগঞ্জ শাখা\n\n
+বিকাশ: 01871614475 (Personal)
+</string>
+
+    <string name="irb_name">ইসলামিক রেডিও বাংলা (IRB)</string>
+
+
 </resources>

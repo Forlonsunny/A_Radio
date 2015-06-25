@@ -2,53 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Sunny_PC\AndroidStudioProjects\OnRadio\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\OnRadio\app\build\intermediates\pre-dexed\debug\classes-7e970ffc2c57f6fb4fa72320548cec2e5a61e3c1.jar" />
-    </item>
-    <item
-        jar="C:\Users\Sunny_PC\AndroidStudioProjects\OnRadio\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\OnRadio\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-330f4ba2814e4e3b8c2d76d151bad88812041c3b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\pre-dexed\debug\classes-c9bf807e26b40e71d7db9c34d4898e1db98add31.jar" />
-    </item>
-    <item
-        jar="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-65fea173b7c5570d68c5270d963011da4fe874af.jar" />
-    </item>
-    <item
-        jar="C:\Users\Sunny_PC\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="C:\Users\Hasan Abdullah\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-64ba15d346bcde21e3353f539aeb14044f474478.jar" />
+        <dex dex="D:\JavaWorkspace\A_Radio\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-1b574951915ba6ca2fdcbb6bba334931b02f1422.jar" />
     </item>
     <item
-        jar="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jar="D:\JavaWorkspace\A_Radio\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="D:\JavaWorkspace\A_Radio\app\build\intermediates\pre-dexed\debug\classes-6e001065def887405480d4e6c55e4bf75971abee.jar" />
+    </item>
+    <item
+        jar="D:\JavaWorkspace\A_Radio\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="D:\JavaWorkspace\A_Radio\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-0a7db17471db4e10b09eae1a3bef0545a7062577.jar" />
+    </item>
+    <item
+        jar="D:\JavaWorkspace\A_Radio\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\IRB24.NET\app\build\intermediates\pre-dexed\debug\classes-e7b3dc942b24a02ad095ab9b7e1c999f54f47144.jar" />
-    </item>
-    <item
-        jar="C:\Users\Sunny_PC\AndroidStudioProjects\OnRadio\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\Sunny_PC\AndroidStudioProjects\OnRadio\app\build\intermediates\pre-dexed\debug\classes-d95449a6e42ba88b819665d7693468131fc16775.jar" />
+        <dex dex="D:\JavaWorkspace\A_Radio\app\build\intermediates\pre-dexed\debug\classes-12916b97ee390c9703ac96ab4c1648629ef7c4a0.jar" />
     </item>
 
 </items>

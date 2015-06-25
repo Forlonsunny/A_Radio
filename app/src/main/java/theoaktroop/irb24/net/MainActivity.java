@@ -7,6 +7,8 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -63,78 +65,30 @@ public class MainActivity extends ActionBarActivity {
         if (!isServiceRunning)
         finish();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main_acitivity, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_about:
+                Intent intentAbout = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intentAbout);
+                return true;
+            case R.id.action_contact:
+                Intent intentContact = new Intent(MainActivity.this, ContactActivity.class);
+                startActivity(intentContact);
+               return true;
+            case R.id.action_developer:
+                Intent intentDeveloper = new Intent(MainActivity.this, DeveloperActivity.class);
+                startActivity(intentDeveloper);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
-
-
-//        sharedPreferences = getSharedPreferences("RadioData",MODE_PRIVATE);
-//        editor = sharedPreferences.edit();
-//
-//        editor.putBoolean("flag", true);
-//        editor.commit();
-
-
-//Telephony manager start
-//    PhoneStateListener phoneStateListener = new PhoneStateListener() {
-//
-//        @Override
-//        public void onCallStateChanged(int state, String incomingNumber) {
-//            if (state == TelephonyManager.CALL_STATE_RINGING) {
-//                //Incoming call: Pause music
-//                //if(mediaPlayer.isPlaying())
-//                    mediaPlayer.pause();
-//            }
-//            else if(state == TelephonyManager.CALL_STATE_IDLE) {
-//                //Not in call: Play music
-//
-//                sharedPreferences = getSharedPreferences("RadioData",MODE_PRIVATE);
-//                editor = sharedPreferences.edit();
-//
-//                editor.putBoolean("flag", true);
-//                editor.commit();
-//
-//                try {
-//                    mediaPlayer = new MediaPlayer();
-//                    mediaPlayer.setDataSource(file_url);
-//                    mediaPlayer.prepareAsync();
-//                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//
-//                        public void onPrepared(MediaPlayer mp) {
-//                            mp.start();
-//                        }
-//                    });
-//
-//                    Toast.makeText(getApplicationContext(), "Playing...", Toast.LENGTH_SHORT).show();
-//                }
-//                catch (IOException e) {
-//                    e.printStackTrace();
-//                    Toast.makeText(getApplicationContext(),"Something wrong...",Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//            else if(state == TelephonyManager.CALL_STATE_OFFHOOK) {
-//                //A call is dialing, active or on hold
-//                mediaPlayer.pause();
-//            }
-//            super.onCallStateChanged(state, incomingNumber);
-//        }
-//    };
-
-//    TelephonyManager mgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-//    if(mgr != null) {
-//        mgr.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
-//    }
-// Telephony manager End
-
-
-
-
-
-
-
-//    http://as1.digitalsynapsebd.com:8081/stream
-//    or
-//    http://103.19.255.242:8081/stream
-//    For Test:
-//    http://www.as1.digitalsynapsebd.com:2199/start/irb24/
-//    private static String file_url_foorti =   "http://121.200.62.53:1021";
-// http://121.200.62.53:1021/;stream.mp3
-// http://www.abcradiobd.fm/radio.html
