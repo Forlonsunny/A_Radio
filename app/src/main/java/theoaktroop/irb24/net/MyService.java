@@ -50,12 +50,12 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
                     }
                 });
                 System.out.println("Service in Try!");
-                Toast.makeText(getApplicationContext(), "Playing IRB24.NET", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Playing IRB24.NET", Toast.LENGTH_SHORT).show();
             }
             catch (IOException e) {
                 e.printStackTrace();
                 Toast.makeText(getApplicationContext(),"Something wrong...",Toast.LENGTH_SHORT).show();
-                System.out.println("Service in Catch!");
+//                System.out.println("Service in Catch!");
             }
         }
         super.onCreate();
