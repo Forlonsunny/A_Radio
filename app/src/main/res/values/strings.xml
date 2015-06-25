@@ -8,7 +8,7 @@
     <string name="action_contact">Contact</string>
     <string name="action_developer">Developer</string>
     <string name="title_activity_splash_screen">IRB24.NET</string>
-    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_about">About</string>
     <string name="title_activity_donate">DonateActivity</string>
     <string name="title_activity_contact">যোগাযোগ</string>
     <string name="title_activity_developer">Developer</string>
