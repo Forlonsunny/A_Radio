@@ -106,6 +106,10 @@ public class ContactActivity extends ActionBarActivity {
                 Intent intentAbout = new Intent(ContactActivity.this, AboutActivity.class);
                 startActivity(intentAbout);
                 return true;
+            case R.id.action_donate:
+                Intent intentDonate = new Intent(ContactActivity.this, DonateActivity.class);
+                startActivity(intentDonate);
+                return true;
             case R.id.action_developer:
                 Intent intentDeveloper = new Intent(ContactActivity.this, DeveloperActivity.class);
                 startActivity(intentDeveloper);
@@ -122,7 +126,7 @@ public class ContactActivity extends ActionBarActivity {
         if(isNetworkAvailable()) {
             adLinearLayout.setVisibility(View.VISIBLE);
             AdView mAdView;
-            mAdView = (AdView) findViewById(R.id.adView1);
+            mAdView = (AdView) findViewById(R.id.adView3);
             AdRequest adRequest = new AdRequest.Builder().build();
             mAdView.loadAd(adRequest);
         }

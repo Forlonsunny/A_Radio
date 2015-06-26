@@ -7,10 +7,10 @@
     <string name="action_donate">Donate</string>
     <string name="action_contact">Contact</string>
     <string name="action_developer">Developer</string>
-    <string name="title_activity_splash_screen">IRB24.NET</string>
+    <string name="title_activity_splash_screen">irb</string>
     <string name="title_activity_about">About</string>
-    <string name="title_activity_donate">DonateActivity</string>
-    <string name="title_activity_contact">যোগাযোগ</string>
+    <string name="title_activity_donate">Donate</string>
+    <string name="title_activity_contact">Contact</string>
     <string name="title_activity_developer">Developer</string>
 
     <string name="company_name">The Oak Troop</string>
@@ -36,9 +36,10 @@
     <string name="irb_fb">"https://www.facebook.com/irb24"</string>
     <string name="irb_twitter">"https://twitter.com/irb24"</string>
     <string name="irb_youtube">"https://www.youtube.com/user/irb24online"</string>
-    <!--<string name="banner_ad_unit_id">ca-app-pub-4390116502881258/2232333721</string>-->
+    <string name="banner_ad_unit_id">ca-app-pub-4390116502881258/2232333721</string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!--<string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="banner_ad_unit_id">ca-app-pub-4390116502881258/9189987724 </string>-->
 
 
     <string name="about_irb_headline">ইসলামিক রেডিও বাংলা (IRB) সম্পর্কে:\n</string>
@@ -61,6 +62,7 @@
 </string>
 
     <string name="irb_name">ইসলামিক রেডিও বাংলা (IRB)</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

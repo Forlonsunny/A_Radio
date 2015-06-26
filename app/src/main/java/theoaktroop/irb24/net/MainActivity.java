@@ -109,12 +109,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
-addVisibile();
+        addVisibile();
         isServiceRunning = UtilFunctions.isServiceRunning(MyService.class.getName(), getApplicationContext());
         if (!isServiceRunning){
             editor.putBoolean("flag", false);
             editor.commit();
-            finish();
         }
 
     }
@@ -131,6 +130,10 @@ addVisibile();
             case R.id.action_about:
                 Intent intentAbout = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intentAbout);
+                return true;
+            case R.id.action_donate:
+                Intent intentDonate = new Intent(MainActivity.this, DonateActivity.class);
+                startActivity(intentDonate);
                 return true;
             case R.id.action_contact:
                 Intent intentContact = new Intent(MainActivity.this, ContactActivity.class);
