@@ -23,14 +23,16 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
     MediaPlayer mediaPlayer;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    RecorderClass myRecorderClass = new RecorderClass();
 
     @Override
     public void onCreate() {
 
-        sharedPreferences = getSharedPreferences("IRB24Data",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("IRB24Data", MODE_PRIVATE);
         editor = sharedPreferences.edit();
         mediaPlayer = new MediaPlayer();
-        file_url = "http://103.19.255.242:8081/stream";
+//        file_url = "http://103.19.255.242:8081/stream";
+        file_url =  "http://programmerguru.com/android-tutorial/wp-content/uploads/2013/04/hosannatelugu.mp3";
 
 //        System.out.println("Service in OnCreate()!");
 
@@ -71,9 +73,16 @@ public class MyService extends Service implements AudioManager.OnAudioFocusChang
         }
         super.onCreate();
 
+
+
     }
 
-    @Override
+    public void startRec(){
+        myRecorderClass.startRecording();
+    }
+
+
+        @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         return super.onStartCommand(intent, flags, startId);

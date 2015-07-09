@@ -26,14 +26,19 @@ public class MainActivity extends ActionBarActivity {
     boolean isServiceRunning;
     Intent intent;
     ImageView button;
+    ImageView recordButton;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    RecorderClass myRecorderClass;
+    boolean recorderFlag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (ImageView) findViewById(R.id.button);
+        recordButton = (ImageView) findViewById(R.id.recordImageView);
+        myRecorderClass = new RecorderClass();
         addVisibile();
         sharedPreferences = getSharedPreferences("IRB24Data", MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -45,6 +50,7 @@ public class MainActivity extends ActionBarActivity {
                 startService(intent);
 
                 button.setImageResource(R.drawable.ic_stop);
+                recordButton.setImageResource(R.drawable.ic_recorder);
                 editor.putBoolean("flag", true);
                 editor.commit();
 //                Toast.makeText(getApplicationContext(),"mara kha...",Toast.LENGTH_LONG).show();
@@ -53,6 +59,11 @@ public class MainActivity extends ActionBarActivity {
             }
             else{//Service is running now
                 button.setImageResource(R.drawable.ic_stop);
+
+                if(recorderFlag==true)
+                    recordButton.setImageResource(R.drawable.ic_recorder);
+                else
+                    recordButton.setImageResource(R.drawable.ic_recorder_stop);
             }
         }
         else {
@@ -104,6 +115,20 @@ public class MainActivity extends ActionBarActivity {
             Toast.makeText(getApplicationContext(),"Check your Internet Connection!", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    public void recordMethod(View view){
+
+        if(recorderFlag==true){ // not recording now
+            myRecorderClass.startRecording();
+            recorderFlag = false;
+            recordButton.setImageResource(R.drawable.ic_recorder_stop);
+        }
+        else{ // now recording
+            myRecorderClass.stopRecording();
+            recorderFlag = true;
+            recordButton.setImageResource(R.drawable.ic_recorder);
+        }
     }
 
     @Override
